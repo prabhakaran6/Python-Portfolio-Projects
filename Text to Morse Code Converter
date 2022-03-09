@@ -1,0 +1,21 @@
+###### Python Code to convert Text to Morse Code   ###############################
+
+code_to_translate = input("Enter the string to convert to Morse code:").upper()
+morse_string = ''
+morse_dict = {
+    'A': '.-', 'B': '.-', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....', 'I': '..',
+    'J': '.---', 'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 'P': '.--.', 'Q': '--.-', 'R': '.-.',
+    'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', 'Y': '-.--', 'Z': '--..',
+    '0': '-----', '1': '.----', '2': '..---', '3': '...--', '4': '....-', '5': '.....', '6': '-....', '7': '--...',
+    '8': '---..', '9': '----.',
+    '&': '.-...', "'": '.----.', '@': '.--.-.', ')': '-.--.-', '(': '-.--.', ':': '---...', ',': '--..--',
+    '=': '-...-', '!': '-.-.--', '.': '.-.-.-', '-': '-....-', 'x': '-..-', '+': '.-.-.', '"': '.-..-.', '?': '..--..',
+    '/': '-..-.', ' ': ' / '
+}
+
+
+for char in code_to_translate:
+    morse_string = morse_string+morse_dict[char]+' '        ###### Concatenating the characters in the string with space in between to differentiate.
+
+print(f"The morse code is: {morse_string}")
+
